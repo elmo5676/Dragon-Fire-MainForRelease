@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A389" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AirfieldCD" representedClassName=".AirfieldCD" syncable="YES">
+        <attribute name="communications_CD" optional="YES" attributeType="Transformable" customClassName="[CommunicationCD]" syncable="YES"/>
+        <attribute name="country_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="elevation_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="faa_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icao_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mgrs_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="navaids_CD" optional="YES" attributeType="Transformable" customClassName="[NavaidCD]" syncable="YES"/>
+        <attribute name="runways_CD" optional="YES" attributeType="Transformable" customClassName="[RunwayCD]" syncable="YES"/>
+        <attribute name="state_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeConversion_CD" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="BullseyeCD" representedClassName=".BullseyeCD" syncable="YES">
+        <attribute name="bearingIconsIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bearingLabels_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bullsEyeName_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="centerPoint_CD" optional="YES" attributeType="Transformable" customClassName="[Double]" syncable="YES"/>
+        <attribute name="centerpointIcon_CD" optional="YES" attributeType="String" customClassName="IconType" syncable="YES"/>
+        <attribute name="centerpointIconIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="centerpointLabel_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="includedInBL_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itIsABullseye_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lineColor_CD" optional="YES" attributeType="String" customClassName="ColorKML" syncable="YES"/>
+        <attribute name="lineOpacity_CD" optional="YES" attributeType="String" customClassName="Transparency" syncable="YES"/>
+        <attribute name="lineThickness_CD" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="magVariation_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="polyColor_CD" optional="YES" attributeType="String" customClassName="ColorKML" syncable="YES"/>
+        <attribute name="polyOpacity_CD" optional="YES" attributeType="String" customClassName="Transparency" syncable="YES"/>
+        <attribute name="radiusOfOuterRing_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rangeBearingIconType_CD" optional="YES" attributeType="String" customClassName="IconType" syncable="YES"/>
+        <attribute name="rangeIconsIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rangeLabels_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="CommunicationCD" representedClassName=".CommunicationCD" syncable="YES">
+        <attribute name="airfieldID_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="freqs_CD" optional="YES" attributeType="Transformable" customClassName="[FreqCD]" syncable="YES"/>
+        <attribute name="id_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name_CD" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DivertFieldsCD" representedClassName=".DivertFieldsCD" syncable="YES">
+        <attribute name="icao_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icaoLabelIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="iconIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="iconType_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="includedInBL_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="polyColor_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="polyOpacity_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ringColor_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ringIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ringSize_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="FreqCD" representedClassName=".FreqCD" syncable="YES">
+        <attribute name="communicationsId_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="freq_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MarkStoreCD" representedClassName=".MarkStoreCD" syncable="YES">
+        <attribute name="markBearingofPOItoBullsEye_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="markBullseyeRefName_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="markDistanceofPOItoBullsEye_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="markMagVar_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="markPilotAlt_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="markPilotCoords_CD" optional="YES" attributeType="Transformable" customClassName="[Double]" syncable="YES"/>
+        <attribute name="markPilotHeadingMag_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="markPilotHeadingTrue_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="markPOICoords_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="markPOIMGRS_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="markPOIUTM_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="markTime_CD" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="NavaidCD" representedClassName=".NavaidCD" syncable="YES">
+        <attribute name="airfieldID_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="channel_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="course_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="distance_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frequency_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ident_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="long_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tacanDMEMode_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type_CD" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PlaceMarkCD" representedClassName=".PlaceMarkCD" syncable="YES">
+        <attribute name="iconIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="iconType_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="includedInBL_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="labelIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name_CD" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PolygonCD" representedClassName=".PolygonCD" syncable="YES">
+        <attribute name="closed_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coords_CD" optional="YES" attributeType="Transformable" customClassName="[[Double]]" syncable="YES"/>
+        <attribute name="filledIn_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="includedInBL_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lineColor_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lineOpacity_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="polyColor_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="polyOpacity_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width_CD" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="RingCD" representedClassName=".RingCD" syncable="YES">
+        <attribute name="iconIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="iconType_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="includedInBL_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="polyColor_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="polyOpacity_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ringColor_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ringIncluded_CD" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ringSize_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="width_CD" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="RunwayCD" representedClassName=".RunwayCD" syncable="YES">
+        <attribute name="airfieldID_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coordLatHi_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coordLatLow_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coordLonHi_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coordLonLow_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="elevHi_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="elevLow_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="highID_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_CD" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="length_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lowID_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="magHdgHi_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="magHdgLow_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="overrunHiLength_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="overrunHiType_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overrunLowLength_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="overrunLowType_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="runwayCondition_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="slopeHi_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="slopeLow_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="surfaceType_CD" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tdzeHi_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tdzeLow_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="trueHdgHi_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="trueHdgLow_CD" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="width_CD" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <fetchRequest name="FetchAllAirports" entity="AirfieldCD"/>
+    <fetchRequest name="FetchRequest1" entity="DivertFieldsCD"/>
+    <fetchRequest name="FetchRequest11" entity="PlaceMarkCD"/>
+    <fetchRequest name="FetchRequest12" entity="RingCD"/>
+    <fetchRequest name="runwayLengthFetchRequest" entity="RunwayCD" predicateString="length_CD &gt; 7999"/>
+    <elements>
+        <element name="AirfieldCD" positionX="-1257.63671875" positionY="182.44921875" width="128" height="255"/>
+        <element name="BullseyeCD" positionX="-679.5234375" positionY="184.4375" width="128" height="330"/>
+        <element name="CommunicationCD" positionX="-986.11328125" positionY="186.20703125" width="128" height="105"/>
+        <element name="DivertFieldsCD" positionX="-544.91796875" positionY="186.88671875" width="128" height="238"/>
+        <element name="FreqCD" positionX="-986.45703125" positionY="529.3515625" width="128" height="88"/>
+        <element name="MarkStoreCD" positionX="-823.16796875" positionY="187.79296875" width="128" height="223"/>
+        <element name="NavaidCD" positionX="-986.40234375" positionY="297.85546875" width="128" height="225"/>
+        <element name="PlaceMarkCD" positionX="-400.578125" positionY="418.3984375" width="128" height="148"/>
+        <element name="PolygonCD" positionX="-411.35546875" positionY="186.03125" width="128" height="193"/>
+        <element name="RingCD" positionX="-537.90625" positionY="427.4296875" width="128" height="225"/>
+        <element name="RunwayCD" positionX="-1122.765625" positionY="185.2421875" width="128" height="435"/>
+    </elements>
+</model>

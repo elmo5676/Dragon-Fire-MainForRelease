@@ -1,0 +1,11 @@
+framework module Coordinates {
+  umbrella header "Coordinates.h"
+
+  export *
+  module * { export * }
+}
+
+module Coordinates.Swift {
+    header "Coordinates-Swift.h"
+    requires objc
+}

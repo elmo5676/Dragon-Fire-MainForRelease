@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "5.1.0",
+  "iOS" : [
+    {
+      "name" : "IBAnimatable",
+      "hash" : "b6a1de227117a9d05f360ffaa2fbdc75533c698d88da5bc468e450464f932bbe"
+    }
+  ]
+}
