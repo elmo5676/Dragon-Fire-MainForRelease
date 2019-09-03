@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import KML
 import CoreData
-import KML
 
 class PathKmlAnnotations: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,  UITextFieldDelegate, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -187,8 +185,8 @@ class PathKmlAnnotations: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBAction func addButton(_ sender: UIButton) {
         if nameTextField.text == nil || nameTextField.text == "" {
             let alertController = UIAlertController(title: "Name Missing", message:
-                "Please enter a unique name for the path for the database", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+                "Please enter a unique name for the path for the database", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default,handler: nil))
             self.present(alertController, animated: true)
         } else {
             coordsForCurrentPoly = getCoordsFromTextView(coordListTextView.text)
@@ -438,7 +436,7 @@ class PathKmlAnnotations: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let path = polygonsInCoreData[indexPath.row].name_CD {
                 do {

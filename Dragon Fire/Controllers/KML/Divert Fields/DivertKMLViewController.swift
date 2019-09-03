@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import KML
+
 
 class DivertKMLViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
@@ -258,8 +258,8 @@ class DivertKMLViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         if airfields.count == 0 {
             let alertController = UIAlertController(title: "No Matches", message:
-                "Either check your entry and try again or enter custom airfield information and press the Custom button", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default,handler: nil))
+                "Either check your entry and try again or enter custom airfield information and press the Custom button", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Retry", style: UIAlertAction.Style.default,handler: nil))
             alertController.addTextField(configurationHandler: userLatTextField)
             alertController.addTextField(configurationHandler: userLongTextField)
             alertController.addTextField(configurationHandler: userICAOTextField)
@@ -419,7 +419,7 @@ class DivertKMLViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let icao = divertTable[indexPath.row].icao_CD {
                 

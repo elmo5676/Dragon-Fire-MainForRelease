@@ -9,7 +9,6 @@
 import UIKit
 import SpriteKit
 import CoreData
-import KML
 
 
 
@@ -183,7 +182,7 @@ class BullseyeTableViewController: UITableViewController {
     }
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let sectionOfTable = tableSectionCells[indexPath.section]
             pc.viewContext.delete(sectionOfTable[indexPath.row])

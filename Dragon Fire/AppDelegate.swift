@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var cdu = CoreDataUtilities()
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         DispatchQueue.global(qos: .default).async {
             let results = self.cdu.printResults(pc: self.persistentContainer)
             if results.numOfAirfields != 3870 || results.numOfComms != 17565 || results.numOfNavaids != 36970 || results.numOfRunways != 6102 {

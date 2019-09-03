@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import KML
+
 
 class KMLViewController: UIViewController {
 
@@ -15,7 +15,7 @@ class KMLViewController: UIViewController {
         super.viewDidLoad()
         self.currentDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "bullsEyeKML")
         self.currentDetailViewController!.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(self.currentDetailViewController!)
+        self.addChild(self.currentDetailViewController!)
         self.addSubview(subView: self.currentDetailViewController!.view, toView: self.detailContainerView)
         
 
@@ -99,8 +99,8 @@ class KMLViewController: UIViewController {
     }
     
     func cycleFromViewController(oldViewController: UIViewController, toViewController newViewController: UIViewController) {
-        oldViewController.willMove(toParentViewController: nil)
-        self.addChildViewController(newViewController)
+        oldViewController.willMove(toParent: nil)
+        self.addChild(newViewController)
         self.addSubview(subView: newViewController.view, toView: self.detailContainerView!)
         newViewController.view.alpha = 0
         newViewController.view.layoutIfNeeded()
@@ -110,8 +110,8 @@ class KMLViewController: UIViewController {
         },
                        completion: { finished in
                         oldViewController.view.removeFromSuperview()
-                        oldViewController.removeFromParentViewController()
-                        newViewController.didMove(toParentViewController: self)
+                        oldViewController.removeFromParent()
+                        newViewController.didMove(toParent: self)
         })
     }
     

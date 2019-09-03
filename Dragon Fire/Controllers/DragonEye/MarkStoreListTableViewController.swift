@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KML
 import CoreData
 
 class MarkStoreListTableViewController: UITableViewController {
@@ -153,7 +152,7 @@ class MarkStoreListTableViewController: UITableViewController {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let timeStamp = listOfFixes[indexPath.section].markTime_CD {
                 

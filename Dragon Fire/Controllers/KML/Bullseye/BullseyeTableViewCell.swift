@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import KML
 
 class BullseyeTableViewCell: UITableViewCell, UIPopoverPresentationControllerDelegate {
 

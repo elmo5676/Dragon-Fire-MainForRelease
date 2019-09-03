@@ -130,7 +130,7 @@ open class BreakOutToRefreshView: SKView {
       self.breakOutScene.reset()
       self.breakOutScene.start()
     }
-    UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
+    UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions(), animations: { () -> Void in
       if #available(iOS 11.0, *) {
 //        self.scrollView.contentInset.top += self.sceneHeight + self.scrollView.adjustedContentInset.top
         self.scrollView.contentInset.top += self.sceneHeight + self.scrollView.safeAreaInsets.top
@@ -145,7 +145,7 @@ open class BreakOutToRefreshView: SKView {
   @objc open func endRefreshing() {
     if (!isDragging || forceEnd) && isVisible {
       self.isVisible = false
-      UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
+      UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions(), animations: { () -> Void in
         if #available(iOS 11.0, *) {
           self.scrollView.contentInset.top -= self.sceneHeight + self.scrollView.safeAreaInsets.top
         } else {

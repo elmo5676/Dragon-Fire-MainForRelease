@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import KML
 import CoreData
-import KML
 
 class PlaceMarkViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
@@ -153,8 +151,8 @@ class PlaceMarkViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     @IBAction func addNewPlacemarkButton(_ sender: UIButton) {
         if validCoords == false {
             let alertController = UIAlertController(title: "Invalid Coords", message:
-                "Please recheck the coordinates you've entered.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+                "Please recheck the coordinates you've entered.", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default,handler: nil))
             self.present(alertController, animated: true)
         } else {
             addNewPlacemarkToCoreData()
@@ -332,7 +330,7 @@ class PlaceMarkViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let placeMarkName = placeMarkContainer[indexPath.row].name_CD {
                 

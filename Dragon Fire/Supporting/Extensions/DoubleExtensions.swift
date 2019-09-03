@@ -28,7 +28,7 @@ public extension Double {
     }
    
     
-    public func lat_DDdddd_To_DDMMdd() -> String {
+    func lat_DDdddd_To_DDMMdd() -> String {
         let lat = self
         let degPart = floor(Double.abs(lat))
         let decimalPart = Double.abs(lat).truncatingRemainder(dividingBy: 1)
@@ -49,7 +49,7 @@ public extension Double {
         return coordReturn
     }
     
-    public func long_DDdddd_To_DDMMdd() -> String {
+    func long_DDdddd_To_DDMMdd() -> String {
         let long = self
         let degPart = floor(Double.abs(long))
         let decimalPart = Double.abs(long).truncatingRemainder(dividingBy: 1)

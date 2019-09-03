@@ -164,7 +164,7 @@ public struct LatLon : CustomStringConvertible {
     }
     
     public static func parseLatLon(stringToParse val: String) throws -> LatLon {
-        guard var idx = val.index(of: "/") else{
+        guard var idx = val.firstIndex(of: "/") else{
             throw LatLonError.parseError("Invalid string")
         }
         let strLat =  val[val.startIndex..<idx].trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)

@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import KML
 
 
 class BaseLineKMLViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -69,7 +68,7 @@ class BaseLineKMLViewController: UIViewController, UITableViewDelegate, UITableV
    
     
     func createInternalPlacemarkKML() -> String {
-        var placemarkKML = ""
+        let placemarkKML = ""
         
         return placemarkKML
     }

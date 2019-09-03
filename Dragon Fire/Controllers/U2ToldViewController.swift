@@ -270,16 +270,16 @@ class U2ToldViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                                rwyHdg: String,
                                flaps15: String,
                                spoilers: String) {
-        let component00 = fuelLoadArray.index(of: fuelLoad)
-        let component01 = ktJetArray.index(of: ktJet)
-        let component02 = conditionArray.index(of: condition)
-        let component03 = tempArray.index(of: tempF)
-        let component04 = fieldElevArray.index(of: fieldElev)
-        let component05 = windSpeedArray.index(of: windSpeed)
-        let component06 = windDirectionArray.index(of: windDir)
-        let component07 = rwyHDGArray.index(of: rwyHdg)
-        let component08 = flaps15Array.index(of: flaps15)
-        let component09 = spoilersArray.index(of: spoilers)
+        let component00 = fuelLoadArray.firstIndex(of: fuelLoad)
+        let component01 = ktJetArray.firstIndex(of: ktJet)
+        let component02 = conditionArray.firstIndex(of: condition)
+        let component03 = tempArray.firstIndex(of: tempF)
+        let component04 = fieldElevArray.firstIndex(of: fieldElev)
+        let component05 = windSpeedArray.firstIndex(of: windSpeed)
+        let component06 = windDirectionArray.firstIndex(of: windDir)
+        let component07 = rwyHDGArray.firstIndex(of: rwyHdg)
+        let component08 = flaps15Array.firstIndex(of: flaps15)
+        let component09 = spoilersArray.firstIndex(of: spoilers)
         self.inputPickerViewOutlet.selectRow(component00!, inComponent: 0, animated: false)
         self.pickerView(self.inputPickerViewOutlet, didSelectRow: component00!, inComponent: 0)
         self.inputPickerViewOutlet.selectRow(component01!, inComponent: 1, animated: false)
@@ -384,16 +384,16 @@ class U2ToldViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         func atString(string: String) -> NSAttributedString? {
-            let at = NSAttributedString(string: string, attributes: [NSAttributedStringKey.backgroundColor:UIColor.clear,NSAttributedStringKey.font:UIFont.init(name: "Times", size: 8.0)!,NSAttributedStringKey.foregroundColor:UIColor.yellow])
+            let at = NSAttributedString(string: string, attributes: [NSAttributedString.Key.backgroundColor:UIColor.clear,NSAttributedString.Key.font:UIFont.init(name: "Times", size: 8.0)!,NSAttributedString.Key.foregroundColor:UIColor.yellow])
             return at
         }
         
         func redString(string: String) -> NSAttributedString? {
-            let at = NSAttributedString(string: string, attributes: [NSAttributedStringKey.backgroundColor:UIColor.clear,NSAttributedStringKey.font:UIFont.init(name: "Times", size: 8.0)!,NSAttributedStringKey.foregroundColor:UIColor.red])
+            let at = NSAttributedString(string: string, attributes: [NSAttributedString.Key.backgroundColor:UIColor.clear,NSAttributedString.Key.font:UIFont.init(name: "Times", size: 8.0)!,NSAttributedString.Key.foregroundColor:UIColor.red])
             return at
         }
         func whiteString(string: String) -> NSAttributedString? {
-            let at = NSAttributedString(string: string, attributes: [NSAttributedStringKey.backgroundColor:UIColor.clear,NSAttributedStringKey.font:UIFont.init(name: "Times", size: 8.0)!,NSAttributedStringKey.foregroundColor:UIColor.white])
+            let at = NSAttributedString(string: string, attributes: [NSAttributedString.Key.backgroundColor:UIColor.clear,NSAttributedString.Key.font:UIFont.init(name: "Times", size: 8.0)!,NSAttributedString.Key.foregroundColor:UIColor.white])
             return at
         }
         if pickerView == inputPickerViewOutlet {

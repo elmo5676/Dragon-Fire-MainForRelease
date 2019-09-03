@@ -11,7 +11,7 @@ import UIKit
 
 public extension String {
     
-    public func removeSpaces() -> String {
+    func removeSpaces() -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines).filter { $0 != Character(" ")}
     }
     
@@ -145,7 +145,7 @@ public extension String {
      -DD.dddd -DDD.dddd
      */
     
-    public func latitudeTranslate() -> Double {
+    func latitudeTranslate() -> Double {
         let latString = self
         var latDouble: Double = 0.0
         func coordLatConvert(coord: Double) -> Double {
@@ -183,7 +183,7 @@ public extension String {
         return latDouble
     }
     
-    public func longitudeTranslate() -> Double {
+    func longitudeTranslate() -> Double {
         let longString = self
         var longDouble: Double = 0.0
         func coordLongConvert(coord: Double) -> Double {
@@ -231,7 +231,7 @@ public extension String {
     
     
     
-    public func coordTranslate() -> [Double] {
+    func coordTranslate() -> [Double] {
         let coords = self
         let latDouble: Double
         let longDouble: Double
@@ -334,7 +334,7 @@ public extension String {
         return coordArray
     }
     
-    public func jsonCoordProcessing() -> String {
+    func jsonCoordProcessing() -> String {
         let coordInput = self
         var coords = ""
         var coordPartArray = coordInput.components(separatedBy: "-")
@@ -348,7 +348,7 @@ public extension String {
         return coords
     }
     
-    public func importFlightPlanFromForeflight() -> [String:String] {
+    func importFlightPlanFromForeflight() -> [String:String] {
         let clipBaord = "Clip Board"
         var importAll = [String:String]()
         let foreflightFlightPlan = self
@@ -367,7 +367,7 @@ public extension String {
     }
     
     
-    public func switchCodeToImage() -> String {
+    func switchCodeToImage() -> String {
         var colorImageName = ""
         switch self {
         case "000000":
@@ -388,7 +388,7 @@ public extension String {
         return colorImageName
     }
     
-    public func switchColorImageToCode() -> String {
+    func switchColorImageToCode() -> String {
         var color = ""
         switch self {
         case "Black":
@@ -410,7 +410,7 @@ public extension String {
     }
     
     
-    public func switchIcon() -> String {
+    func switchIcon() -> String {
         var icon = ""
         switch self {
         case " ":
@@ -493,7 +493,7 @@ public extension String {
         return icon
     }
     
-    public func switchIconImageNameToHref() -> String {
+    func switchIconImageNameToHref() -> String {
         var icon = ""
         switch self {
         case "none":
@@ -575,7 +575,7 @@ public extension String {
         return icon
     }
     
-    public func getCGColor() -> CGColor {
+    func getCGColor() -> CGColor {
         switch self {
         case "000000":
             return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)

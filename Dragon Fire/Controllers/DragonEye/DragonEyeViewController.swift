@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 import CoreLocation
 import CoreMotion
-import KML
 
 
 class DragonEyeViewController: UIViewController, CLLocationManagerDelegate {
@@ -342,8 +341,8 @@ class DragonEyeViewController: UIViewController, CLLocationManagerDelegate {
             markStoreCompleteKML = OpenCloseKML(kmlItems: markStoreInternalKML).KMLGenerator()
         } else {
             let alertController = UIAlertController(title: "No Stored Fixes", message:
-                "You haven't taken any fixes, give it a shot on the little green button on the bottom right.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok, I'll give it a shot", style: UIAlertActionStyle.default,handler: nil))
+                "You haven't taken any fixes, give it a shot on the little green button on the bottom right.", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok, I'll give it a shot", style: UIAlertAction.Style.default,handler: nil))
             
             self.present(alertController, animated: true)
         }

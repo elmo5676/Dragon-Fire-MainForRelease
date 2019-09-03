@@ -27,7 +27,7 @@ class CoorShareViewController: UIViewController {
         var urlString = URLComponents(string: "foreflightmobile://maps/search?")!
         urlString.query = "q=\(String(describing: coordsToShare))"
         let url = urlString.url!
-        UIApplication.shared.open(url , options: [:], completionHandler: nil)
+        UIApplication.shared.open(url , options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         presentingViewController?.dismiss(animated: true, completion: nil)
         coordsToShare = ""
     }
@@ -48,4 +48,9 @@ class CoorShareViewController: UIViewController {
     
     
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

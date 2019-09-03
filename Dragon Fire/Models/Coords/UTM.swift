@@ -220,8 +220,10 @@ public struct Utm: CustomStringConvertible{
         let matches = regex.matches(in: utm, range: range)
         var results = zip(matches, matches.dropFirst().map { Optional.some($0) } + [nil]).map{ current, next -> String in
             let newRange = current.range(at: 0)
-            let start = String.UTF16Index(encodedOffset: newRange.location)
-            let end = next.map {$0.range(at: 0)}.map { String.UTF16Index(encodedOffset: $0.location)} ?? String.UTF16Index(encodedOffset: utm.utf16.count)
+//            let start = String.UTF16Index(encodedOffset: newRange.location)
+//            let end = next.map {$0.range(at: 0)}.map { String.UTF16Index(encodedOffset: $0.location)} ?? String.UTF16Index(encodedOffset: utm.utf16.count)
+            let start = String.UTF16View.Index(encodedOffset: newRange.location)
+            let end = next.map {$0.range(at: 0)}.map { String.UTF16View.Index(encodedOffset: $0.location)} ?? String.UTF16View.Index(encodedOffset: utm.utf16.count)
             return String(utm.utf16[start..<end])!
         }
         results = results.map {$0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)}

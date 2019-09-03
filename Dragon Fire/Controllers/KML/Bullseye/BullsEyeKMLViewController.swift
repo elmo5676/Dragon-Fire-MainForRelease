@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import CoreLocation
-import KML
+
 
 class BullsEyeKMLViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, CLLocationManagerDelegate {
 
@@ -216,8 +216,8 @@ class BullsEyeKMLViewController: UIViewController, UIPickerViewDelegate, UIPicke
         var allFieldsValid = true
         if bullseyeNameTextfield.text == ""   {
             let alertController = UIAlertController(title: "Missing Information", message:
-                "Please make sure you have entered a name and coordinates for the Bulls Eye or SARDOT you want to save.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+                "Please make sure you have entered a name and coordinates for the Bulls Eye or SARDOT you want to save.", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default,handler: nil))
             self.present(alertController, animated: true)
             allFieldsValid = false
         }
@@ -417,8 +417,8 @@ class BullsEyeKMLViewController: UIViewController, UIPickerViewDelegate, UIPicke
         clearAllInputButtonOutlet.showPressed()
         clearInformation()
         let alertController = UIAlertController(title: "Delete All BE/Sar/DOTs?", message:
-            "Are you sure you want to delete all stored Bullseyes and SAR/DOT.", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Hmmm... maybe not.", style: UIAlertActionStyle.default,handler: nil))
+            "Are you sure you want to delete all stored Bullseyes and SAR/DOT.", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Hmmm... maybe not.", style: UIAlertAction.Style.default,handler: nil))
         alertController.addAction(UIAlertAction(title: "I'm not scared!", style: .destructive, handler: { _ in
             self.cdu.deleteAllBEandSARDOTFromDB(pc: self.pc)
         }))
